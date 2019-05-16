@@ -1,18 +1,55 @@
-constants shiny_red 0.4 0.2 0.8 0.2 0 0 0.1 0.1 0
+constants shiny_red 0.7 0.7 0.9 0.5 0.2 0.5 0.5 0.2 0.5
+constants dull_pink 0.8 0.8 0.3 0.6 0.6 0.1 0.6 0.6 0.1
+constants dull_white 0.9 0.9 0.1 0.9 0.9 0.1 0.9 0.9 0.1
+
 constants shiny_teal 0.3 0.0 0.0 0.3 0.2 0.8 0.3 0.2 0.8
 constants dull_yellow 0.3 0.8 0.2 0.3 0.8 0.2 0 0 0
 push
-move 250 150 0
+move 250 120 0
 sphere shiny_red -100 130 0 60
 sphere shiny_red 100 130 0 60
+
 push
-rotate x 45
-sphere 0 0 0 150
+sphere dull_white 0 0 0 150
+move 0 0 80
+sphere shiny_red 0 0 0 100
 pop
 push
-move 0 -150 0
-rotate x 30
-scale 1 1 0.5
-torus dull_yellow 0 0 0 30 175
-display
+scale .9 .7 1
+sphere dull_pink 0 280 0 100
+pop
+push
+
+move 100 150 0
+rotate z 90
+move -20 -60 0
+box dull_pink 0 10 0 20 90 15
+move 0 100 0
+push
+move -100 -180 0
+rotate z 90
+ box dull_pink 0 0 0 20 100 15
+ move 10 20 0
+sphere dull_white 0 0 0 25
+pop
+pop
+
+
+
+move -100 150 0
+rotate z -90
+move -20 -60 0
+box dull_pink 0 10 0 20 90 15
+move 0 100 0
+push
+move -100 -180 0
+rotate z 90
+ box dull_pink 0 0 0 20 100 15
+ move 10 20 0
+sphere dull_white 0 0 0 25
+pop
+pop
+
+
 save face.png
+display
